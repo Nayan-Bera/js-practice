@@ -1,12 +1,12 @@
 console.log(" recursive function finds the nth Fibonacci number")
-function recursivefact(n){
-    if(n===1){
-        return 1
+function recursivefibo(n){
+    if(n<=1){
+        return n
     }
     else{
-        return n*(recursivefact(n-1))
+        return recursivefibo(n-1)+recursivefibo(n-2)
     }
 
 }  
 
-console.log(recursivefact(5))
+console.log(recursivefibo(10))
