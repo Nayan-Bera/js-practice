@@ -1,3 +1,4 @@
+<!--Rewrite using Async/Await-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
 
     <script>
 
-function loadimg(src){
+async function loadimg(src){
 
     return new Promise((resolve,reject)=>
 {
@@ -27,15 +28,21 @@ img.src =src
 })
 
 }
-let imgconta = document.getElementById("imgcont")
+async function loadimages() {
+    let imgconta = document.getElementById("imgcont") 
 
-  let imgurl=["./image/image1.jfif","./image/image2.jfif","./image/image3.jfif","./image/image4.jfif"]
-  
-  Promise.all(imgurl.map(loadimg))
-  .then(image=> {image.forEach(image=> imgconta.appendChild(image))
+    let imgurl=["./image/image1.jfif","./image/image2.jfif","./image/image3.jfif","./image/image4.jfif"]
+try{
+    const images = await Promise.all(imgurl.map(loadimg))
+    images.forEach(image=> imgconta.appendChild(image))
 
-  })
-  .catch(error =>console.log("error"))
+}
+catch(error){
+console.error(error)
+}
+}
+
+loadimages()
   
   </script>
 </body>
