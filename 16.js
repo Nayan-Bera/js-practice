@@ -8,4 +8,4 @@ function doubleelements(arr){
 console.log(doubleelements(arr))
 
 
-//map() is a higher oder function to filter data
+//map() is a higher oder function to filter data and in map element get one by one

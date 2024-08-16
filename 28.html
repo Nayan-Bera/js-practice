@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="imgcont"></div>
+
+    <script>
+
+function loadimg(src){
+
+    return new Promise((resolve,reject)=>
+{
+let img =new Image(500,500)
+img.onload =function(){
+    resolve(img)
+}
+img.onerr =function(){
+    reject(new erron("failed to load img:",+src))
+}
+img.src =src
+
+})
+
+}
+let imgconta = document.getElementById("imgcont")
+
+  let imgurl=["./image/image1.jfif","./image/image2.jfif","./image/image3.jfif","./image/image4.jfif"]
+  
+  Promise.all(imgurl.map(loadimg))
+  .then(image=> {image.forEach(image=> imgconta.appendChild(image))
+
+  })
+  .catch(error =>console.log("error"))
+  
+  </script>
+</body>
+</html>
