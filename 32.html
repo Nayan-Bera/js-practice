@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <form id="myform">
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last name:</label><br>
+           <input type="text" id="lname" name="lname" required><br>
+
+           <!--<label for="email">Email:</label><br>
+           <input type="email" id="email" name="email" required><br>-->
+           <input id="submit" type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <script>
+        function validateform(){
+            let form = document.getElementById("myform")
+            if(form.checkValidity()){
+                alert("form submitted")
+            }
+            else{
+                alert("please enter required filled")
+            }
+        }
+        
+        let form = document.getElementById("myform")
+        //let sub = document.getElementById("submit")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            validateform()
+        })
+
+    </script>
+    
+</body>
+</html>
