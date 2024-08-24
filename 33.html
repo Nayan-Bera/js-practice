@@ -7,6 +7,25 @@
     <title>Bubbling and capturing</title>
 </head>
 <body>
-    
+    <div>
+        Lorem <strong>ipsum dolor sit amet,</strong>
+         consectetur adipisicing elit. Numquam culpa error quos
+          dolore voluptatem tenetur minima quod incidunt quas rerum!
+           In fugit mollitia fuga expedita assumenda velit magnam
+            dolor perspiciatis?
+    </div>
+    <script>
+        let parant =document.querySelector("div")
+
+        let child =document.querySelector("strong")
+
+parant.addEventListener('click',()=>{
+    console.log("parant")
+},true)
+child.addEventListener('click',()=>{
+    console.log("child")
+},true)
+
+    </script>
 </body>
 </html>
