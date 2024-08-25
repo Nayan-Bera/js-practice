@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>quote-changing </title>
+</head>
+<body>
+    <h1>Success quotes</h1>
+   <div id="quoteDisplay">Loading...</div>
+   <script>
+
+const quote= [ "Success is focusing the full power of all you are on what you have a burning desire to achieve" ,
+"Success is not final failure is not fatal It is the courage to continue that counts",
+"I find that the harder I work, the more luck I seem to have." ,
+"Whether you think you can or think you can’t, you’re right.",
+"The greater the difficulty, the more the glory in surmounting it"]
+
+function displayrandom(){
+    const quoteDisplay= document.getElementById("quoteDisplay")
+    const randomitems= Math.floor(Math.random()*quote.length)
+    quoteDisplay.textContent =quote[randomitems]
+
+
+}
+displayrandom();
+function timechange(){
+    displayrandom()
+    setTimeout(timechange,10000)
+
+}
+timechange();
+
+   </script>
+</body>
+</html>
