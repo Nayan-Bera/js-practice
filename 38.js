@@ -5,7 +5,7 @@ let arr=[]
 
 for(let i=0; i<rows;i++){
     let row=[]
-    ///arr.push(new Array(columns))
+    //arr.push(new Array(columns))
     for(let j=0;j<columns;j++){
        // arr[i][j]= i+j;
         row.push(i+j)
