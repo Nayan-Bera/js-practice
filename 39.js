@@ -7,7 +7,7 @@ const person={
 }
 
 console.log(person)
-const {fname,lname,...left}= person
+const {fname,lname,...left} = person
 console.log(fname)
 console.log(lname)
 console.log(left)
