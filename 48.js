@@ -1,12 +1,12 @@
 console.log("Vowels or consonants")
 function constandvowel(str){
-
+//check consents words
     function isConsonent(char){
 
         const consonents ="bcdfgjklmnpqstvxzhrwy"
        return consonents.includes(char);
     }
-
+//count the consents and  vowels
     function countconstandvowel(word){
         let consonents = 0
         let vowels= 0
