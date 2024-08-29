@@ -10,7 +10,7 @@ function evenishoddish(num){
     //console.log(digit)
     const sum = digit.reduce((acc,digit)=>acc+digit,0)
 
-    return sum%2 == 0? "evenish" : "Oddish"
+    return sum % 2 == 0? "evenish" : "Oddish"
   
 }
 

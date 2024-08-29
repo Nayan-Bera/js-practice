@@ -16,7 +16,7 @@ if(excesslength!==0){
 return binaryString
 
 
-console.log(binaryString)
+//console.log(binaryString)
 }
 
 console.log(texttoNumBinary("zero one  zero one zero one zero one"))
